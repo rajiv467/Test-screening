@@ -1,4 +1,4 @@
-name: Terraform GitHub Actions Plan
+name: Terraform GitHub Actions apply
 on:
    push:
     branches: 
@@ -46,7 +46,7 @@ jobs:
 
       - name: Terraform Apply
         id: Apply
-        if: github.ref == 'refs/head/main' && github.event_name == 'push'
+        if: github.ref == 'refs/head/main' 
         run: terraform apply -auto-approve
         continue-on-error: true
         # working-directory: .     
