@@ -49,4 +49,11 @@ jobs:
         if: github.ref == 'refs/heads/main' 
         run: terraform apply -auto-approve
         continue-on-error: true
+        # working-directory: .    
+      - name: Terraform Destroy
+        id: Apply
+        if: github.ref == 'refs/heads/main' 
+        run: terraform destroy -auto-approve
+        continue-on-error: true
         # working-directory: .     
+      
