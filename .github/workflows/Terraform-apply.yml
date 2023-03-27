@@ -2,7 +2,7 @@ name: Terraform GitHub Actions apply
 on:
    push:
     branches: 
-     - main
+     - main1
 jobs:
    terraform:
     name: Terraform
